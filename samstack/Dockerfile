@@ -37,6 +37,11 @@ RUN git clone https://github.com/samtools/samtools.git && \
     make && \
     make install
 
+RUN apt-get autoclean && \
+    rm -rf samtools && \
+    rm -rf bcftools && \
+    rm -rf htslib
+
 RUN useradd -ms /bin/bash dev
 USER dev
 WORKDIR /home/dev
