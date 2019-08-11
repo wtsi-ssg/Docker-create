@@ -2,8 +2,8 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTED=noninteractive
 
-RUN apt-get update && \
-    apt-get -y upgrade
+RUN apt-get update 
+RUN apt-get -y upgrade
 
 RUN apt-get install -y apt-utils autoconf automake autotools-dev \
     build-essential \
