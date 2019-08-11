@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
-RUN apt-get update && \
-    apt-get -qq -y upgrade
+RUN apt-get update 
+RUN apt-get -qq -y upgrade
 
 RUN apt-get install -qq -y apt-utils automake \
     bc bison build-essential \
