@@ -7,7 +7,7 @@ LABEL version=’0.1.0’ \
 RUN apt-get update 
 RUN apt-get -qq -y upgrade
 
-RUN DEBIAN_FRONTEND="noninteractive" TZ="America/New_York" apt-get install -y tzdata
+RUN DEBIAN_FRONTEND="noninteractive" TZ="Europe/London" apt-get install -y tzdata
 
 RUN apt-get install -qq -y apt-utils automake \
     bc bison build-essential \
