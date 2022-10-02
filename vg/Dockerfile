@@ -1,7 +1,13 @@
-FROM ubuntu:bionic
+FROM ubuntu:20.04
+
+LABEL version=’0.1.0’ \
+    description='VariationGraph toolset for informatics workflows' \
+    maintainer='peter.clapham@sanger.ac.uk'
 
 RUN apt-get update 
 RUN apt-get -qq -y upgrade
+
+RUN DEBIAN_FRONTEND="noninteractive" TZ="America/New_York" apt-get install -y tzdata
 
 RUN apt-get install -qq -y apt-utils automake \
     bc bison build-essential \
